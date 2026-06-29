@@ -52,7 +52,7 @@ function SideNav() {
             </div>
             <ul className="sidenav_list">
                 <li className="list_li">
-                    <NavLink to="/" className={({ isActive }) => isActive ? "link-active" : ""}>Home</NavLink>
+                    <NavLink to="/" className={({ isActive }) => isActive ? "link-active" : ""} end>Home</NavLink>
                 </li>
             </ul>
         </nav>
