@@ -7,7 +7,7 @@ import HomePage from './pages/HomePage/HomePage.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename="/english-vocabulary-app">
+    <BrowserRouter basename="/english-vocabulary-app/">
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<HomePage />} />
