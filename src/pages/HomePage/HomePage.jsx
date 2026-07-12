@@ -11,6 +11,7 @@ import Word from "./components/Word/Word.jsx";
 import { showAddWordModalWindow } from "../../utils/showAddWordModalWindow.js";
 import Button from "../../components/Button/Button.jsx";
 import { showSidenav } from "../../utils/showSidenav.js";
+
 import SideBarButtonOpen from "../../assets/images/SideBarButtonOpen.svg"
 import sunIcon from "../../assets/images/sun.svg"
 import moonIcon from "../../assets/images/moon.svg"
