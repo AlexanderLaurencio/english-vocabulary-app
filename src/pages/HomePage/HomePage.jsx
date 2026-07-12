@@ -11,6 +11,9 @@ import Word from "./components/Word/Word.jsx";
 import { showAddWordModalWindow } from "../../utils/showAddWordModalWindow.js";
 import Button from "../../components/Button/Button.jsx";
 import { showSidenav } from "../../utils/showSidenav.js";
+import SideBarButtonOpen from "../../assets/images/SideBarButtonOpen.svg"
+import sun from "../../assets/images/sun.svg"
+import moon from "../../assets/images/moon.svg"
 
 function HomePage() {
     let [isDarkmode, setIsDarkmode] = useState()
@@ -94,13 +97,13 @@ function HomePage() {
         <main className="home_page" data-testid="HomePage">
             <HomePageHeader > 
                 <Button className="sidebar_button-open" dataTestId="SideBarButtonOpen" onClick={showSidenav}> 
-                    <img src="src/assets/images/SideBarButtonOpen.svg" alt="SideBar Button" />
+                    <img src={SideBarButtonOpen} alt="SideBar Button" />
                 </Button>
                 <SearchBar onChange={onSearchBarChange}/>
                 <Button className="button_toggle_theme" dataTestId="ButtonToggleTheme" onClick={toggleTheme}>
                     {isDarkmode 
-                    ?<img src="src/assets/images/sun.svg" alt="Sun"/>
-                    :<img src="src/assets/images/moon.svg" alt="Moon"/>
+                    ?<img src={sun} alt="Sun"/>
+                    :<img src={moon} alt="Moon"/>
                     }
                 </Button>
                 <div className="home_page_header_container-buttons">
