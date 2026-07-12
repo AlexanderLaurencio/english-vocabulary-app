@@ -4,6 +4,11 @@ import SearchType from "../SearchType/SearchType"
 import FilterType from "../FilterType/FilterType"
 import InputChooseWordType from "../InputChooseWordType/InputChooseWordType"
 import Button from "../../../../components/Button/Button"
+import starIconFilled from "../../../../assets/images/WordFavoriteFilled.svg"
+import starIconEmpty from "../../../../assets/images/WordFavoriteEmpty.svg"
+import saveWordButtonIcon from "../../../../assets/images/WordSaveButton.svg"
+import editWordButtonIcon from "../../../../assets/images/WordEditButton.svg"
+import deleteWordButtonIcon from "../../../../assets/images/WordDeleteButton.svg"
 
 function Word({ word, onChange }) {
     let [isEditing, setIsEditing] = useState(false)
@@ -43,8 +48,8 @@ function Word({ word, onChange }) {
 
             <Button onClick={changeIsFavorite} className="button_mark_favorite">
                 {isFavorite 
-                ? <img src="src/assets/images/WordFavoriteFilled.svg"/>
-                : <img src="src/assets/images/WordFavoriteEmpty.svg"/>  
+                ? <img src={starIconFilled}/>
+                : <img src={starIconEmpty}/>  
                 }
             </Button>
 
@@ -82,14 +87,14 @@ function Word({ word, onChange }) {
             <div className="word_buttons_container">
                     {isEditing 
                     ? <Button onClick={saveChanges} className="button_save_word_changes">
-                        <img src="src/assets/images/WordSaveButton.svg" alt="Save word" />
+                        <img src={saveWordButtonIcon} alt="Save word" />
                     </Button>
                     :<Button onClick={() => setIsEditing(!isEditing)} className="button_edit_word">
-                        <img src="src/assets/images/WordEditButton.svg" alt="Edit word" />
+                        <img src={editWordButtonIcon} alt="Edit word" />
                     </Button>}
             
                 <Button onClick={deleteWord} className="button_delete_word">
-                    <img src="src/assets/images/WordDeleteButton.svg" alt="Delete word" />
+                    <img src={deleteWordButtonIcon} alt="Delete word" />
                 </Button>
             </div>
         </article>

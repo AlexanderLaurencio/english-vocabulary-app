@@ -2,6 +2,10 @@ import { NavLink, Link } from "react-router-dom";
 import Button from "../Button/Button";
 import { useEffect, useState } from "react";
 import { showSidenav } from "../../utils/showSidenav";
+import sunIcon from "../../assets/images/sun.svg";
+import moonIcon from "../../assets/images/moon.svg";
+import crossWhiteIcon from "../../assets/images/cross-white.svg";
+import crossBlackIcon from "../../assets/images/cross-black.svg";
 
 function SideNav() {
     let [isDarkmode, setIsDarkmode] = useState(false)
@@ -39,14 +43,14 @@ function SideNav() {
             <div className="side_nav_buttons">
                 <Button className="button_toggle_theme" dataTestId="ButtonToggleTheme" onClick={toggleTheme}>
                     {isDarkmode 
-                    ?<img src="src/assets/images/sun.svg" alt="Sun"/>
-                    :<img src="src/assets/images/moon.svg" alt="Moon"/>
+                    ?<img src={sunIcon} alt="Sun"/>
+                    :<img src={moonIcon} alt="Moon"/>
                     }
                 </Button>
                 <Button className="button_hide_sidenav" dataTestId="ButtonHideSidenav" onClick={showSidenav}>
                     {isDarkmode 
-                    ?<img src="src/assets/images/cross-white.svg" alt="Cross" />
-                    :<img src="src/assets/images/cross-black.svg" alt="Cross" />
+                    ?<img src={crossWhiteIcon} alt="Cross" />
+                    :<img src={crossBlackIcon} alt="Cross" />
                     }
                 </Button>
             </div>

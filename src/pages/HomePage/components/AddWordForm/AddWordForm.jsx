@@ -5,6 +5,8 @@ import { resetInputs } from "../../../../utils/resetInputs.js"
 import Button from "../../../../components/Button/Button.jsx"
 import { showAddWordModalWindow } from "../../../../utils/showAddWordModalWindow.js"
 import { input } from "@testing-library/user-event/dist/cjs/event/input.js"
+import starIconFilled from "../../../../assets/images/WordFavoriteFilled.svg"
+import starIconEmpty from "../../../../assets/images/WordFavoriteEmpty.svg"
 
 function AddWordForm({ onRefreshUI }) {
     let [isFavorite, setIsFavorite] = useState(false)
@@ -45,8 +47,8 @@ function AddWordForm({ onRefreshUI }) {
         <form className="add_wordform" data-testid="AddWordForm">
             <Button onClick={markAsFavorite} className={"button_mark_favorite"}>
                 {isFavorite 
-                    ? <img src="src/assets/images/WordFavoriteFilled.svg"/>
-                    : <img src="src/assets/images/WordFavoriteEmpty.svg"/>  
+                    ? <img src={starIconFilled}/>
+                    : <img src={starIconEmpty}/>  
                 }   
             </Button>
             <label htmlFor="input_word_name" className="add_word_label">
