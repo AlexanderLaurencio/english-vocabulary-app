@@ -41,7 +41,7 @@ function HomePage() {
     },[]);
     async function showWords() {
         let response = await getAllRecords();
-            if (response.length >= 1) {
+            if (response !== undefined) {
                 setWords(response);
                 setWordsCopy(response);
             }
