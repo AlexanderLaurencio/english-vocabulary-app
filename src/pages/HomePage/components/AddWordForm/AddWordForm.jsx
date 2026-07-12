@@ -4,7 +4,6 @@ import { addRecord, getAllRecords } from "../../../../services/IndexedDB.js"
 import { resetInputs } from "../../../../utils/resetInputs.js"
 import Button from "../../../../components/Button/Button.jsx"
 import { showAddWordModalWindow } from "../../../../utils/showAddWordModalWindow.js"
-import { input } from "@testing-library/user-event/dist/cjs/event/input.js"
 import starIconFilled from "../../../../assets/images/WordFavoriteFilled.svg"
 import starIconEmpty from "../../../../assets/images/WordFavoriteEmpty.svg"
 
