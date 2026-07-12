@@ -12,8 +12,8 @@ import { showAddWordModalWindow } from "../../utils/showAddWordModalWindow.js";
 import Button from "../../components/Button/Button.jsx";
 import { showSidenav } from "../../utils/showSidenav.js";
 import SideBarButtonOpen from "../../assets/images/SideBarButtonOpen.svg"
-import sun from "../../assets/images/sun.svg"
-import moon from "../../assets/images/moon.svg"
+import sunIcon from "../../assets/images/sun.svg"
+import moonIcon from "../../assets/images/moon.svg"
 
 function HomePage() {
     let [isDarkmode, setIsDarkmode] = useState()
@@ -102,8 +102,8 @@ function HomePage() {
                 <SearchBar onChange={onSearchBarChange}/>
                 <Button className="button_toggle_theme" dataTestId="ButtonToggleTheme" onClick={toggleTheme}>
                     {isDarkmode 
-                    ?<img src={sun} alt="Sun"/>
-                    :<img src={moon} alt="Moon"/>
+                    ?<img src={sunIcon} alt="Sun"/>
+                    :<img src={moonIcon} alt="Moon"/>
                     }
                 </Button>
                 <div className="home_page_header_container-buttons">
