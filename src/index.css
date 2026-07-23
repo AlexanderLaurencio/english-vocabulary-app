@@ -279,6 +279,18 @@ body{
     border-radius: var(--border-radius-small);
 }
 
+.word:hover, .word:focus{
+    outline: 1.5px solid var(--accent-color);
+}
+
+.word:hover .button_edit_word{
+    visibility: visible;
+}
+
+.word .button_edit_word{
+    visibility: hidden;
+}
+
 .word input:focus-visible, .input_choose_word_category:focus-visible{
     outline: none;
 }
